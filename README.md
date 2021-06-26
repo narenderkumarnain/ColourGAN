@@ -93,6 +93,10 @@ model.train(dataloaders['train'],dataloaders['test'], epochs = 100)
 
 ```
 
+## Pretrained Weights
+[Generator](https://drive.google.com/file/d/1jPzTPKTrN8tWiLzRSh2hmY3PWxHC3LMF/view?usp=sharing)   
+[Discriminator](https://drive.google.com/file/d/1IwdjRdYlUf2SwT4l0Fctfi51_dB7hNtP/view?usp=sharing)
+
 ## References
 [GAN_image_colorizing](https://github.com/karoly-hars/GAN_image_colorizing)
 
