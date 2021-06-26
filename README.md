@@ -45,7 +45,7 @@ model = ColourGAN(cfg , inference=True)
 img = cv2.imread('sample.png')
 
 # running inference
-res =model.inference(img)
+res = model.inference(img)
 
 # saving result image
 cv2.imwrite('sample_res.png' , res)
