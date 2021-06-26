@@ -25,7 +25,7 @@ def app(weights):
         col2.image(new_img, caption='Coloured Image.', use_column_width=True)
 
     st.write("""
-    [GitHub Repository](https://github.com/narenderkumarnain/GAN-Apps)
+    [GitHub Repository](https://github.com/narenderkumarnain/ColourGAN)
     """)
 
 
