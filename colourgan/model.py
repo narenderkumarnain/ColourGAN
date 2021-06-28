@@ -57,17 +57,6 @@ class ColourGAN:
         if not os.path.exists(self.cfg.output_path):
             os.makedirs(self.cfg.output_path)
 
-        if pretrained is not None:
-            # we need to load the weight dictionaries
-            self.generator.load_state_dict(torch.load(
-                pretrained['gen'],
-                map_location=device
-            ))
-            self.discriminator.load_state_dict(torch.load(
-                pretrained['disc'],
-                map_location=device
-            ))
-
         global_step = 0
         for epoch in range(epochs):
             print(f'Epoch: {epoch}')
