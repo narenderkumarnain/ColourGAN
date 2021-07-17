@@ -20,11 +20,11 @@ def save_losses(cfg , epoch_gen_adv_loss, epoch_gen_l1_loss, epoch_disc_real_los
         (epoch_disc_real_loss + epoch_disc_fake_loss) / (data_loader_len*2)
     )
 
-    log3 = '                 acc. = {:.4f} (real acc. = {:.4f}, fake acc. = {:.4f})'.format(
+    log3 = ' acc. = {:.4f} (real acc. = {:.4f}, fake acc. = {:.4f})'.format(
         (epoch_disc_real_acc + epoch_disc_fake_acc) / (data_loader_len*2),
         epoch_disc_real_acc / data_loader_len,
         epoch_disc_fake_acc / data_loader_len
     )
     with open(os.path.join(cfg.output_path , cfg.training_stats_file) , 'w') as f:
-        f.write(data + '\n' + log1 + '\n' + log2 + '\n' + log3)
+        f.write(data + '\n' + log1 + '\n' + log2 + log3)
 
