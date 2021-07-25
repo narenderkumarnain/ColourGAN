@@ -152,7 +152,7 @@ class ColourGAN:
 
                 # save after every nth epoch
                 if phase == 'test':
-                    if epoch % self.cfg.checkpoint_frequency == 0 or epoch == self.cfg.max_epoch - 1:
+                    if epoch % self.cfg.checkpoint_frequency == 0 or epoch == epochs - 1:
                         gen_path = os.path.join(self.cfg.output_path, 'checkpoint_ep{}_gen.pt'.format(epoch))
                         disc_path = os.path.join(self.cfg.output_path, 'checkpoint_ep{}_disc.pt'.format(epoch))
                         torch.save(self.generator.state_dict(), gen_path)
